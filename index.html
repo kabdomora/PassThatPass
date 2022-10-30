@@ -9,26 +9,47 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- app background, page -->
       <header>
         <h1>Password Generator</h1>
+        <!-- header name -->
       </header>
       <div class="card">
-        <div class="card-header">
+        <!-- app bounding box -->
+        <div class="card-header">          
           <h2>Generate a Password</h2>
+          <!-- app header -->
         </div>
+        <!-- end header bounding box -->
         <div class="card-body">
+          <!-- display field for the generated password -->
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+          <!-- non-editable, style-id, placeholder-text, aria-label? is this like alt text for pics? -->
         </div>
+        <!-- end of display field bounding box -->
+
+<!-- add length input field -->
+<!-- add upper selection -->
+<!-- add lower selection -->
+<!-- add special characters selection -->
+<!-- add numbers selection -->
+
+
         <div class="card-footer">
+          <!-- bounding box for the generate button -->
           <button id="generate" class="btn">Generate Password</button>
+          <!-- button to generate password. needs to be driven by java -->
         </div>
+        <!-- end of generate button bounding box -->
       </div>
+      <!-- end of app bounding box -->
     </div>
+    <!-- end of page bounding box -->
     <script src="script.js"></script>
   </body>
 </html>
