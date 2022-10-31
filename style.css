@@ -123,11 +123,15 @@ header {
   padding: 10px 10px;
   margin: 10px 0;
   width: 100%;
+  font-size: 50px;
+  font-weight: bolder;
 }
 
 .parameters input {
   width: 100%;
+  height: 50px;
   position: absolute;
+  right: -200px;
 }
 
 .card-footer {
