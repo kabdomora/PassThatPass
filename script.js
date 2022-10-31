@@ -59,18 +59,26 @@ const specialSelected = document.getElementById("special");
 // constants for the generator function to refer to for checkbox values 
 // will be ^^ element.value or element.checked
 
-// pulling checkbox input fields
-
-// const upperEl = upperSelected,checked;
-// const lowerEl = lowerSelected,checked;
-// const numberEl = numberSelected,checked;
-// const specialEl = specialSelected,checked;
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
+generateBtn.addEventListener("click", function() {
+	const sliderEl = +slider.value;
+	const upperEl = upperSelected.checked;
+	const lowerEl = lowerSelected.checked;
+	const numberEl = numberSelected.checked;
+	const specialEl = specialSelected.checked;
+	passwordEl.innerText = generatePassword(sliderEl, upperEl, lowerEl, numberEl, specialEl);
+});
+
+// pulling checkbox input fields
+
+
+
+
+
+
 
 // Write password to the #password input
 function writePassword() {
