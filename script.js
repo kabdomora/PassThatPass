@@ -1,5 +1,17 @@
 // Assignment code here
-var startBtn = document.querySelector("#start")
+var startBtn = document.querySelector("#start");
+var begin = document.querySelector(".card-start");
+var selections = document.querySelector(".card");
+
+
+startBtn.addEventListener("click", function() {
+	begin.setAttribute("style", "display:none");
+	selections.setAttribute("style", "display:block");
+});
+
+// reveals the card to generate the password.
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
