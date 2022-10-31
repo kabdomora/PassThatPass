@@ -16,3 +16,6 @@ Initially I thought it might be best to create a variable string with all select
 
 Enjoy! 
 
+Deployed link: https://kabdomora.github.io/PassThatPass/
+Deployed screenshot: ![Screenshot](Screenshot-deployed.PNG)
+
