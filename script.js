@@ -18,8 +18,13 @@ slider.addEventListener("input", update);
 
 // variables for updating the app for password length and displayed selection for password length
 
-console.log(slider.value);
+var uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowers = "abcdefghijklmnopqrstuvwxyz";
+var numbers = "0123456789";
+var special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+var complexity = "Undefined";
 
+console.log(complexity);
 
 
 // Get references to the #generate element
