@@ -11,6 +11,15 @@ startBtn.addEventListener("click", function() {
 
 // reveals the card to generate the password.
 
+var slider = document.getElementById("slider");
+var dataLength = document.querySelector(".length-title");
+function update() { dataLength.setAttribute("data-length", slider.value) };
+slider.addEventListener("input", update);
+
+// variables for updating the app for password length and displayed selection for password length
+
+console.log(slider.value);
+
 
 
 // Get references to the #generate element
