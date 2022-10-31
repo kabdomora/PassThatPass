@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fontSize: 30px;
+  --fontWeight: bolder;
+  --fontColor: purple;
+}
+
 html,
 body,
 .wrapper {
@@ -69,6 +75,12 @@ header {
 
 .card-body {
   min-height: 100px;
+  padding: 30px 0;
+}
+
+p {
+  font-size: var(--fontSize);
+  font-style: italic;
 }
 
 .length {
@@ -81,32 +93,39 @@ header {
 
 .length-title {
   position: absolute;
-  top: -10px;
+  top: -25px;
   transform: translateY(-50%);
-	color: black;
+	font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
 }
 
 .length-title::after {
   content: attr(data-length);
   position: absolute;
-  right: -16px;
-  color: black;
+  top: -6px;
+  Left: 130px;
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
 }
 
 .length::before {
   content: attr(data-min);
   left: 10px;
   position: absolute;
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
 }
 
 .length::after {
   content: attr(data-max);
   right: 1px;
   position: absolute;
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
 }
 
 #slider {
-  width: 90%;
+  width: 80%;
   margin: 0 10px;
 }
 
@@ -123,8 +142,8 @@ header {
   padding: 10px 10px;
   margin: 10px 0;
   width: 100%;
-  font-size: 50px;
-  font-weight: bolder;
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
 }
 
 .parameters input {
