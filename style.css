@@ -43,7 +43,9 @@ header {
   opacity: 20%;
 }
 
-/* in java set a control to toggle these from hidden to visible */
+/* in java set a control to toggle these from 
+      (above) opacity 100% -> 20% && unclickable 
+      (below) visiility: hidden -> visible */
 
 .card {
   background-color: hsl(0, 0%, 100%);
