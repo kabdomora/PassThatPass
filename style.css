@@ -84,8 +84,6 @@ header {
   top: -10px;
   transform: translateY(-50%);
 	color: black;
-	pointer-events: none;
-	user-select: none;
 }
 
 .length-title::after {
@@ -110,6 +108,26 @@ header {
 #slider {
   width: 90%;
   margin: 0 10px;
+}
+
+.strength {
+  position; relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.parameters {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.parameters input {
+  width: 100%;
+  position: absolute;
 }
 
 .card-footer {
