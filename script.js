@@ -60,7 +60,7 @@ function getRandomSpecial() {
 // need to have a constant set to update the displayed text and read the slider.value
 
 const passwordEl = document.getElementById("password");
-const sliderEl = document.getElementById("slider");
+// const sliderEl = document.getElementById("slider");
 
 //use this for the call to check checked status
 
@@ -92,7 +92,7 @@ generateBtn.addEventListener("click", function() {
 //this is an event listener only it will not generate the password
 
 
-
+// below generates the password
 function generatePassword(length, upper, lower, number, special) {
 	let generatedPassword = "";
 	const checkSelected = upper + lower + number + special;
