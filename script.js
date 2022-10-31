@@ -11,34 +11,62 @@ startBtn.addEventListener("click", function() {
 
 // reveals the card to generate the password.
 
-var slider = document.getElementById("slider");
+const slider = document.getElementById("slider");
 var dataLength = document.querySelector(".length-title");
 function update() { dataLength.setAttribute("data-length", slider.value) };
 slider.addEventListener("input", update);
 
 // variables for updating the app for password length and displayed selection for password length
 
-var uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowers = "abcdefghijklmnopqrstuvwxyz";
-var numbers = "0123456789";
-var special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+
+// random character formulas. function return one character at a time using math.floor+math.random 
+// (math.floor ensures a whole integer; math.random will pick the random character in the string)
+// there is a way to do this pulling from UTF charset directly but this seemed more intuitive to me
+// less likely to produce undesired results from pointing to the wrong subset of string characters
+// within UTF charset
+
+function ramdomizeUpper() {
+	const uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	return uppers[Math.floor(Math.random() * uppers.length)];
+}
+
+function ramdomizeLower() {
+	const lowers = "abcdefghijklmnopqrstuvwxyz";
+	return lowers[Math.floor(Math.random() * lowers.length)];
+}
+
+function ramdomizeNumber() {
+	const numbers = "0123456789";
+	return numbers[Math.floor(Math.random() * numbers.length)];
+}
+
+function ramdomizeSpecial() {
+	const special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+	return special[Math.floor(Math.random() * special.length)];
+}
+
+const passwordEl = document.getElementById("password");
+// will refer to this for the function to update displayed, generated password
+
+
 var complexity = "Undefined";
+// potentially use this for the stored value for the generated password
 
-// strings for password generation
-
-var upperSelected = getElementById("uppercase");
-var lowerSelected = getElementById("lowercase");
-var numberSelected = getElementById("numerical");
-var specialSelected = getElementById("special");
+const upperSelected = document.getElementById("uppercase");
+const lowerSelected = document.getElementById("lowercase");
+const numberSelected = document.getElementById("numerical");
+const specialSelected = document.getElementById("special");
+// constants for the generator function to refer to for checkbox values 
+// will be ^^ element.value or element.checked
 
 // pulling checkbox input fields
 
-const upperEl = upperSelected,checked;
-const lowerEl = lowerSelected,checked;
-const numberEl = numberSelected,checked;
-const specialEl = specialSelected,checked;
+// const upperEl = upperSelected,checked;
+// const lowerEl = lowerSelected,checked;
+// const numberEl = numberSelected,checked;
+// const specialEl = specialSelected,checked;
 
-// 
+
 
 
 // Get references to the #generate element
