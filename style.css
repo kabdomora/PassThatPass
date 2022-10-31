@@ -71,6 +71,14 @@ header {
   min-height: 100px;
 }
 
+.length {
+  width: 100%;
+}
+
+#slider {
+  width: 100%;
+}
+
 .card-footer {
   text-align: center;
 }
