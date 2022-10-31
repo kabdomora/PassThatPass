@@ -24,7 +24,21 @@ var numbers = "0123456789";
 var special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 var complexity = "Undefined";
 
-console.log(complexity);
+// strings for password generation
+
+var upperSelected = getElementById("uppercase");
+var lowerSelected = getElementById("lowercase");
+var numberSelected = getElementById("numerical");
+var specialSelected = getElementById("special");
+
+// pulling checkbox input fields
+
+const upperEl = upperSelected,checked;
+const lowerEl = lowerSelected,checked;
+const numberEl = numberSelected,checked;
+const specialEl = specialSelected,checked;
+
+// 
 
 
 // Get references to the #generate element
