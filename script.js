@@ -60,7 +60,7 @@ function getRandomSpecial() {
 // need to have a constant set to update the displayed text and read the slider.value
 
 const passwordEl = document.getElementById("password");
-// const sliderEl = document.getElementById("slider");
+// const sliderEl = document.getElementById("slider"); <--redundant
 
 //use this for the call to check checked status
 
@@ -112,9 +112,24 @@ function generatePassword(length, upper, lower, number, special) {
 	}
 
 	
+// set the function for disabling click for the last checkbox, enforce at least 1
 
+	function mustHaveOne() {
+		let checkedCount = [upperSelected, lowerSelected, numberSelected, specialSelected].filter(el => el.checked)
+		checkedCount.forEach(el => {
+			if(checkedCount.length == 1) {
+				el.disabled = true;
+			} else {
+				el.disabled = false;
+			}
+		})
+	}
 
-	
+	[upperSelected, lowerSelected, numberSelected, specialSelected].forEach(el => {
+		el.addEventListener('click', function() {
+			mustHaveOne()
+		})
+	})
 
 
 
